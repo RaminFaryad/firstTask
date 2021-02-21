@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Road {
     private int id;
@@ -13,10 +12,6 @@ public class Road {
     private boolean biDirectional;
 
     public Road() {
-    }
-
-    public Road(int id) {
-        this.id = id;
     }
 
     public int getId() {
@@ -83,19 +78,6 @@ public class Road {
 
     public void setBiDirectional(boolean biDirectional) {
         this.biDirectional = biDirectional;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Road road = (Road) o;
-        return id == road.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 
     public String getTime() {
